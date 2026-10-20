@@ -23,7 +23,7 @@ type Videojuego = {
 };
 
 // En móvil físico sustituye TU_IP_LOCAL por la IP del ordenador.
-const API_URL = 'http://10.254.18.67:3000';
+const API_URL = 'http://172.17.21.35:3000';
 
 export default function App() {
   const [videojuegos, setVideojuegos] = useState<Videojuego[]>([]);
