@@ -1,0 +1,1 @@
+import {Entity,PrimaryGeneratedColumn,Column,ManyToOne}from'typeorm';import {Playlist}from'./playlists.entity';@Entity('canciones')export class Cancion{@PrimaryGeneratedColumn()id:number;@Column()titulo:string;@Column()artista:string;@ManyToOne(()=>Playlist,p=>p.canciones,{onDelete:'CASCADE'})playlist:Playlist;}

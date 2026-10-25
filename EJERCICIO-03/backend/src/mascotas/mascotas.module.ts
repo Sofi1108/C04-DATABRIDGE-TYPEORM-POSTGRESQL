@@ -1,0 +1,1 @@
+import {Module}from'@nestjs/common';import {TypeOrmModule}from'@nestjs/typeorm';import {Mascota}from'./mascotas.entity';import {MascotaService}from'./mascotas.service';import {MascotaController}from'./mascotas.controller';@Module({imports:[TypeOrmModule.forFeature([Mascota])],controllers:[MascotaController],providers:[MascotaService]})export class MascotaModule{}

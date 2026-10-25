@@ -1,0 +1,1 @@
+import {Module}from'@nestjs/common';import {TypeOrmModule}from'@nestjs/typeorm';import {Evento}from'./eventos.entity';import {EventoService}from'./eventos.service';import {EventoController}from'./eventos.controller';@Module({imports:[TypeOrmModule.forFeature([Evento])],controllers:[EventoController],providers:[EventoService]})export class EventoModule{}

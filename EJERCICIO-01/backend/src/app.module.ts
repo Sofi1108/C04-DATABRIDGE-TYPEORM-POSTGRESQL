@@ -11,11 +11,11 @@ import { VideojuegosModule } from './videojuegos/videojuegos.module';
     // forRoot() configura UNA conexión PostgreSQL para la aplicación.
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: '12345678',
-      database: 'databridge_e01',
+      host: process.env.DB_HOST ?? 'localhost',
+      port: Number(process.env.DB_PORT ?? 5432),
+      username: process.env.DB_USER ?? 'postgres',
+      password: process.env.DB_PASSWORD ?? '',
+      database: process.env.DB_NAME ?? 'databridge_e01',
 
       // Las Entities registradas en los módulos se cargarán automáticamente.
       autoLoadEntities: true,

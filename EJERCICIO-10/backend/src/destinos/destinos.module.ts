@@ -1,0 +1,1 @@
+import {Module}from'@nestjs/common';import {TypeOrmModule}from'@nestjs/typeorm';import {Destino}from'./destinos.entity';import {DestinoService}from'./destinos.service';import {DestinoController}from'./destinos.controller';@Module({imports:[TypeOrmModule.forFeature([Destino])],controllers:[DestinoController],providers:[DestinoService]})export class DestinoModule{}

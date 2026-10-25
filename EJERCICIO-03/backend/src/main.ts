@@ -1,0 +1,1 @@
+import {NestFactory}from'@nestjs/core';import {ValidationPipe}from'@nestjs/common';import {AppModule}from'./app.module';async function b(){const a=await NestFactory.create(AppModule);a.enableCors();a.useGlobalPipes(new ValidationPipe({transform:true,whitelist:true}));await a.listen(process.env.PORT||3000)}b();

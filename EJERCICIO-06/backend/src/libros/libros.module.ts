@@ -1,0 +1,1 @@
+import {Module}from'@nestjs/common';import {TypeOrmModule}from'@nestjs/typeorm';import {Libro}from'./libros.entity';import {LibroService}from'./libros.service';import {LibroController}from'./libros.controller';@Module({imports:[TypeOrmModule.forFeature([Libro])],controllers:[LibroController],providers:[LibroService]})export class LibroModule{}

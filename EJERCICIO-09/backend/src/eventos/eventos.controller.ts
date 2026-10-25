@@ -1,0 +1,2 @@
+import {Body,Controller,Delete,Get,Param,Patch,Post,Query}from'@nestjs/common';import {EventoService}from'./eventos.service';@Controller('eventos')export class EventoController{constructor(private s:EventoService){}@Get()all(@Query()q:any){return this.s.findAll(q)}@Get(':id')one(@Param('id')id:string){return this.s.findOne(+id)}@Post()create(@Body()b:any){return this.s.create(b)}@Patch(':id')update(@Param('id')id:string,@Body()b:any){return this.s.update(+id,b)}@Delete(':id')remove(@Param('id')id:string){return this.s.remove(+id)}}
+

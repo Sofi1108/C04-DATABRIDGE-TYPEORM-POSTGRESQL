@@ -1,0 +1,1 @@
+import {Module}from'@nestjs/common';import {TypeOrmModule}from'@nestjs/typeorm';import {Viaje}from'./viajes.entity';import {ViajeService}from'./viajes.service';import {ViajeController}from'./viajes.controller';@Module({imports:[TypeOrmModule.forFeature([Viaje])],controllers:[ViajeController],providers:[ViajeService]})export class ViajeModule{}

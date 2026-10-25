@@ -1,0 +1,1 @@
+import {Module}from'@nestjs/common';import {TypeOrmModule}from'@nestjs/typeorm';import {Sneaker}from'./sneakers.entity';import {SneakerService}from'./sneakers.service';import {SneakerController}from'./sneakers.controller';@Module({imports:[TypeOrmModule.forFeature([Sneaker])],controllers:[SneakerController],providers:[SneakerService]})export class SneakerModule{}

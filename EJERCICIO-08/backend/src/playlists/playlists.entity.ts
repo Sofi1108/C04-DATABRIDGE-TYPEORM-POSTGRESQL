@@ -1,0 +1,1 @@
+import {Entity,PrimaryGeneratedColumn,Column,OneToMany}from'typeorm';import {Cancion}from'./cancion.entity';@Entity('playlists')export class Playlist{@PrimaryGeneratedColumn()id:number;@Column()nombre:string;@Column()descripcion:string;@OneToMany(()=>Cancion,c=>c.playlist,{cascade:true})canciones:Cancion[];}
